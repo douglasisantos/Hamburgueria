@@ -1,51 +1,71 @@
 <template>
-  <Message :msg="msg" v-show="msg" />
+  <!-- <Message :msg="msg" v-show="msg" /> -->
   <div>
-    <form id="burger-form" method="POST" @submit="createBurger">
+    <form id="burger-form" method="POST" @submit.prevent="createBurger">
       <div class="input-container">
         <label for="nome">Nome do cliente:</label>
         <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome" />
       </div>
+
       <div class="input-container">
         <label for="pao">Escolha o pão:</label>
         <select name="pao" id="pao" v-model="pao">
           <option value="">Selecione o Seu pão:</option>
-          <option value="integral">Integral</option>
+          <option v-for="p in paes" :key="p.id" :value="p.tipo">
+            {{ p.tipo }}
+          </option>
         </select>
       </div>
+
       <div class="input-container">
         <label for="carne">Escolha a carne do seu Burger:</label>
         <select name="carne" id="carne" v-model="carne">
           <option value="">Selecione o tipo de carne:</option>
-          <option value="Maminnha">Maminnha</option>
+          <option v-for="c in carnes" :key="c.id" :value="c.tipo">
+            {{ c.tipo }}
+          </option>
         </select>
       </div>
+
       <div id="opcionais-container" class="input-container">
         <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
-        <div class="checkbox-container">
-          <input
-            type="checkbox"
-            name="opcionais"
-            id="opcionais"
-            v-model="opcionais"
-            value="Salame"
-          />
-          <span>Salame</span>
+        <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
+          <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo" />
+          <span>{{ opcional.tipo }}</span>
         </div>
       </div>
+
       <div class="input-container">
         <input type="submit" class="submit-btn" value="Criar meu Burguer" />
       </div>
     </form>
   </div>
 </template>
-<script>
-export default {
-  name: 'BurguerForm',
-  components: {
-    // Add your components here
-  },
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const nome = ref('')
+const pao = ref('')
+const carne = ref('')
+const opcionais = ref([])
+const status = ref('solicitado')
+
+const paes = ref([])
+const carnes = ref([])
+const opcionaisdata = ref([])
+
+const getIngredientes = async () => {
+  const req = await fetch('http://localhost:3000/ingredientes')
+  const data = await req.json()
+  paes.value = data.paes
+  carnes.value = data.carnes
+  opcionaisdata.value = data.opcionais
 }
+
+onMounted(() => {
+  getIngredientes()
+})
 </script>
 
 <style scoped>

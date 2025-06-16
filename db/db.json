@@ -16,6 +16,18 @@
       {
         "id": 4,
         "tipo": "Integral"
+      },
+      {
+        "id": 5,
+        "tipo": "Australiano"
+      },
+      {
+        "id": 6,
+        "tipo": "Brioche"
+      },
+      {
+        "id": 7,
+        "tipo": "Ciabatta"
       }
     ],
     "carnes": [
@@ -34,6 +46,18 @@
       {
         "id": 4,
         "tipo": "Veggie burger"
+      },
+      {
+        "id": 5,
+        "tipo": "Frango Grelhado"
+      },
+      {
+        "id": 6,
+        "tipo": "Costela"
+      },
+      {
+        "id": 7,
+        "tipo": "Linguiça Artesanal"
       }
     ],
     "opcionais": [
@@ -54,12 +78,36 @@
         "tipo": "Tomate"
       },
       {
-        "id": 4,
+        "id": 5,
         "tipo": "Cebola roxa"
       },
       {
-        "id": 4,
+        "id": 6,
         "tipo": "Pepino"
+      },
+      {
+        "id": 7,
+        "tipo": "Alface"
+      },
+      {
+        "id": 8,
+        "tipo": "Molho Barbecue"
+      },
+      {
+        "id": 9,
+        "tipo": "Molho Ranch"
+      },
+      {
+        "id": 10,
+        "tipo": "Ovo"
+      },
+      {
+        "id": 11,
+        "tipo": "Maionese Verde"
+      },
+      {
+        "id": 12,
+        "tipo": "Picles"
       }
     ]
   },
@@ -77,5 +125,66 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "id": "af12",
+      "nome": "teste",
+      "pao": "3 Queijos",
+      "carne": "Alcatra",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Cebola roxa",
+        "Alface",
+        "Molho Ranch",
+        "Maionese Verde"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "b1c9",
+      "nome": "Douglas",
+      "pao": "Italiano Branco",
+      "carne": "Maminha",
+      "opcionais": [
+        "Bacon",
+        "Salame"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "4192",
+      "nome": "JOÃO",
+      "pao": "Parmesão e Orégano",
+      "carne": "Costela",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Cebola roxa",
+        "Alface",
+        "Molho Ranch",
+        "Maionese Verde",
+        "Picles",
+        "Molho Barbecue",
+        "Ovo",
+        "Pepino",
+        "Tomate",
+        "Cheddar"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "fb6d",
+      "nome": "Maria",
+      "pao": "Brioche",
+      "carne": "Picanha",
+      "opcionais": [
+        "Bacon",
+        "Tomate",
+        "Pepino",
+        "Molho Barbecue"
+      ],
+      "status": "Solicitado"
+    }
+  ]
 }

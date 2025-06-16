@@ -1,18 +1,16 @@
 <template>
-  <div class="message-container">
+  <div class="message-container" v-if="msg">
     <p>{{ msg }}</p>
   </div>
 </template>
-<script>
-export default {
-  name: 'Message',
-  props: {
-    msg: String,
-  },
-}
+
+<script setup lang="ts">
+defineProps<{
+  msg: string
+}>()
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .message-container {
   color: #004085;
   background-color: #cce5ff;
@@ -21,5 +19,7 @@ export default {
   padding: 10px;
   max-width: 400px;
   margin: 30px auto;
+  text-align: center;
+  font-weight: 600;
 }
 </style>

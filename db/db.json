@@ -113,21 +113,21 @@
   },
   "status": [
     {
-      "id": 1,
+      "id": "1",
       "tipo": "Solicitado"
     },
     {
-      "id": 2,
+      "id": "2",
       "tipo": "Em produção"
     },
     {
-      "id": 3,
+      "id": "3",
       "tipo": "Finalizado"
     }
   ],
   "burgers": [
     {
-      "id": "af12",
+      "id": "1",
       "nome": "teste",
       "pao": "3 Queijos",
       "carne": "Alcatra",
@@ -142,47 +142,13 @@
       "status": "Solicitado"
     },
     {
-      "id": "b1c9",
-      "nome": "Douglas",
-      "pao": "Italiano Branco",
-      "carne": "Maminha",
+      "id": "f3e6",
+      "nome": "teste",
+      "pao": "Brioche",
+      "carne": "Alcatra",
       "opcionais": [
         "Bacon",
         "Salame"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "4192",
-      "nome": "JOÃO",
-      "pao": "Parmesão e Orégano",
-      "carne": "Costela",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa",
-        "Alface",
-        "Molho Ranch",
-        "Maionese Verde",
-        "Picles",
-        "Molho Barbecue",
-        "Ovo",
-        "Pepino",
-        "Tomate",
-        "Cheddar"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "fb6d",
-      "nome": "Maria",
-      "pao": "Brioche",
-      "carne": "Picanha",
-      "opcionais": [
-        "Bacon",
-        "Tomate",
-        "Pepino",
-        "Molho Barbecue"
       ],
       "status": "Solicitado"
     }

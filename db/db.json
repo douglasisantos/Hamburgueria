@@ -127,30 +127,15 @@
   ],
   "burgers": [
     {
-      "id": "1",
-      "nome": "teste",
-      "pao": "3 Queijos",
-      "carne": "Alcatra",
+      "id": "903b",
+      "nome": "JOÃO",
+      "pao": "Ciabatta",
+      "carne": "Veggie burger",
       "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa",
-        "Alface",
-        "Molho Ranch",
-        "Maionese Verde"
+        "Maionese Verde",
+        "Picles"
       ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "f3e6",
-      "nome": "teste",
-      "pao": "Brioche",
-      "carne": "Alcatra",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado"
+      "status": "Em produção"
     }
   ]
 }
